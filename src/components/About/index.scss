@@ -1,0 +1,15 @@
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(20%);
+}
+
+.bigger-text {
+    text-align: justify;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
