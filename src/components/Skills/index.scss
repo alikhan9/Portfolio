@@ -1,0 +1,164 @@
+:root {
+    --scaler: 1;
+}
+
+.skills-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    left: 23%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    max-height: 90%;
+    z-index: 3;
+    animation: fadeIn 2s linear 1s;
+    
+
+    button {
+        font-size: calc(48px*var(--scaler));
+        font-family: 'Coolvetica';
+        color: #ffd700;
+        background-color: hsl(200, 20%, 9%);
+        border-radius: 50%;
+        width: calc(250px*var(--scaler));
+        height: calc(250px*var(--scaler));
+        cursor: pointer;
+        font-weight: 400;
+        border-color: hsl(200, 20%, 10%);
+        border: 1px solid hsl(200, 20%, 5%);
+    }
+
+
+    ul {
+        position: absolute;
+        list-style: none;
+        opacity: 0;
+    }
+
+    li {
+        position: absolute;
+        left: calc(125px*var(--scaler));
+        top: calc(-142px*var(--scaler));
+
+    }
+
+    .icons {
+        width: calc(48px*var(--scaler));
+        height: calc(48px*var(--scaler));
+
+        &:hover {
+            animation: bounce 1s ease-in;
+        }
+    }
+
+    p {
+        color: #fff;
+        text-align: center;
+        width: calc(60px*var(--scaler));
+        padding: 0;
+        margin: 0;
+        font-size: calc(17px*var(--scaler));
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s linear forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s linear forwards;
+}
+
+
+.skill-1 {
+    transform: translate(260%, -40%);
+}
+
+.skill-2 {
+    transform: translate(-40%, -260%);
+}
+
+.skill-3 {
+    transform: translate(-345%, -40%);
+}
+
+.skill-4 {
+    transform: translate(-190%, 170%);
+}
+
+.skill-5 {
+    transform: translate(140%, 170%);
+}
+
+.skill-4-2 {
+    transform: translate(-30%, 195%);
+}
+
+@media (min-width: 3400px) {
+    :root {
+        --scaler: 2.8;
+    }
+}
+
+@media (max-width: 3400px) {
+    :root {
+        --scaler: 2.1;
+    }
+}
+
+@media (max-width: 3000px) {
+    :root {
+        --scaler: 1.87;
+    }
+}
+
+@media (max-width: 2700px) {
+    :root {
+        --scaler: 1.7;
+    }
+}
+
+@media (max-width: 2500px) {
+    :root {
+        --scaler: 1.5;
+    }
+}
+
+@media (max-width: 1700px) {
+    :root {
+        --scaler: 1.2;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    :root {
+        --scaler: 0.90;
+    }
+}
+
+@media (max-width: 1025px) {
+    :root {
+        --scaler: 0.85;
+    }
+
+    .skills-zone {
+        top: 50%;
+        left: 40%;
+        flex-direction: column;
+        row-gap: 23em;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --scaler: 0.75;
+    }
+
+    .skills-zone {
+        flex-direction: column;
+    }
+
+}
