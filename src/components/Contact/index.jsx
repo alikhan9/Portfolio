@@ -5,9 +5,10 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import './index.scss'
 import { AnimatedLetters } from '../AnimatedLetters/index';
+import { useStateIfMounted } from 'use-state-if-mounted'
 
 export const Contact = () => {
-    const [letterClass, setLetterClass] = useState('text-animate')
+    const [letterClass, setLetterClass] = useStateIfMounted('text-animate')
     const form = useRef()
 
     useEffect(() => {

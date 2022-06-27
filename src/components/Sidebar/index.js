@@ -1,12 +1,11 @@
 import './index.scss'
 
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
+import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { GiSkills } from 'react-icons/gi'
 export const Sidebar = () => {
   return (
     <div className='nav-bar'>
@@ -29,7 +28,7 @@ export const Sidebar = () => {
             activeclassname='active' 
             className="skills-link" 
             to='/skills'>
-                <FontAwesomeIcon icon={faUser} color='#4d4d4e'/>
+                <GiSkills style={{ color: '#4d4d4e' }} className='icons' />
             </NavLink>
             <NavLink 
             exact='true' 

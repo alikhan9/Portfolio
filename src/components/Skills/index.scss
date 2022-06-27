@@ -13,13 +13,12 @@
     width: 60%;
     max-height: 90%;
     z-index: 3;
-    animation: fadeIn 2s linear 1s;
-    
+
 
     button {
         font-size: calc(48px*var(--scaler));
         font-family: 'Coolvetica';
-        color: #ffd700;
+        color: hsl(51, 100%, 50%);
         background-color: hsl(200, 20%, 9%);
         border-radius: 50%;
         width: calc(250px*var(--scaler));
@@ -28,8 +27,25 @@
         font-weight: 400;
         border-color: hsl(200, 20%, 10%);
         border: 1px solid hsl(200, 20%, 5%);
+        opacity: 0.5;
+        background-image: 
+        linear-gradient(to top, hsl(200, 20%, 16%) 50%, hsl(0, 0%, 5%) 50%),
+        linear-gradient(to top, #ffd700 50%, transparent 50%);
+      
+      -webkit-background-clip: text,padding-box;
+      background-clip: text,padding-box;
+      -webkit-text-fill-color: transparent;
+      color: transparent;  
+      background-size: 100% 200%;
+      background-position: top;
+      transition: background-position .6s ease-in;
     }
 
+    .show-button {
+        opacity: 1;
+        color: #333;
+        background-position: bottom;
+    }
 
     ul {
         position: absolute;
@@ -60,16 +76,21 @@
         padding: 0;
         margin: 0;
         font-size: calc(17px*var(--scaler));
+        transform: translateX(-10%);
     }
+
 }
 
+
+
 .fade-in {
-    animation: fadeIn 1s linear forwards;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .fade-out {
-    animation: fadeOut 1s linear forwards;
+    animation: fadeOut 1s ease-in-out forwards;
 }
+
 
 
 .skill-1 {

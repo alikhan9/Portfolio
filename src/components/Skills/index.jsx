@@ -5,20 +5,17 @@ import { FaReact, FaDocker } from 'react-icons/fa';
 import { SiSpringboot, SiJava, SiPostgresql, SiCss3, SiAntdesign } from 'react-icons/si'
 import { DiJavascript1, DiHtml5, DiNodejs } from 'react-icons/di'
 import './index.scss'
+import { useStateIfMounted } from 'use-state-if-mounted';
 
 export const Skills = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useStateIfMounted('text-animate')
   const [fade, setFade] = useState(false);
   const [fade2, setFade2] = useState(false);
 
   useEffect(() => {
-    let isMounted = true;               // note mutable flag
     setTimeout(() => {
-      if (isMounted) {
-        setLetterClass('text-animate-hover');
-      }
+      setLetterClass('text-animate-hover');
     }, 3100)
-    return () => { isMounted = false };
   }, [])
 
   return (
@@ -26,13 +23,15 @@ export const Skills = () => {
       <div className="container  skills-page  ">
         <div className="skills-zone">
           <div>
-            <button onClick={() => setFade(!fade)} >
+            <button
+              className={fade ? "show-button" : null}
+              onClick={() => setFade(!fade)} >
               <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['B', 'a ', 'c', 'k', '-', 'e', 'n ', 'd']}
-              idx={15}
-            /></button>
-            <ul className={fade ?"fade-in" : "fade-out"}>
+                letterClass={letterClass}
+                strArray={['B', 'a ', 'c', 'k', '-', 'e', 'n ', 'd']}
+                idx={15}
+              /></button>
+            <ul className={fade ? "fade-in" : "fade-out"}>
               <li className='skill-1'>
                 <SiSpringboot style={{ color: 'hsl(122, 80.39215686274508%, 60%)' }} className='icons' />
                 <p>Spring Boot</p>
@@ -56,14 +55,16 @@ export const Skills = () => {
             </ul>
           </div>
           <div>
-          <button onClick={() => setFade2(!fade2)} >
+            <button
+              className={fade2 ? "show-button" : null}
+              onClick={() => setFade2(!fade2)} >
               <AnimatedLetters
                 letterClass={letterClass}
                 strArray={['F', 'r ', 'o', 'n', 't', '-', 'e ', 'n', 'd']}
                 idx={15}
               />
             </button>
-            <ul className={fade2 ?"fade-in" : "fade-out"}>
+            <ul className={fade2 ? "fade-in" : "fade-out"}>
               <li className='skill-1'>
                 <FaReact style={{ color: 'hsl(240, 80%, 60%)' }} className='icons' />
                 <p>React</p>

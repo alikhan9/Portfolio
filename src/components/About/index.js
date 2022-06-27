@@ -4,26 +4,23 @@ import Loader from 'react-loaders'
 import { AnimatedLetters } from '../AnimatedLetters/index';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { useStateIfMounted } from 'use-state-if-mounted';
 
 
 export const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const [isReady, setIsReady] = useState(false)
+  const [letterClass, setLetterClass] =  useStateIfMounted('text-animate')
+  const [isReady, setIsReady] = useStateIfMounted(false);
 
-  const particlesInit = async (main) => {
-    await loadFull(main);
+
+  const particlesInit =  (main) => {   
+      loadFull(main);
   };
 
-
   useEffect(() => {
-    let isMounted = true;               // note mutable flag
     setTimeout(() => {
-      if (isMounted) {
         setLetterClass('text-animate-hover');
         setIsReady(true);
-      }
-    }, 3100)
-    return () => { isMounted = false };
+      }, 3100) 
   }, [])
 
   return (
@@ -59,7 +56,7 @@ export const About = () => {
                   value: "hsl(200,20%,10%)",
                 },
               },
-              fpsLimit: 120,
+              fpsLimit: 60,
               interactivity: {
                 events: {
                   onClick: {
