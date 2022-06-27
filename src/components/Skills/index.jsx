@@ -15,7 +15,7 @@ export const Skills = () => {
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, 3100)
+    }, 2500)
   }, [])
 
   return (

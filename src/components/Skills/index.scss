@@ -34,8 +34,9 @@
       
       -webkit-background-clip: text,padding-box;
       background-clip: text,padding-box;
-      -webkit-text-fill-color: transparent;
-      color: transparent;  
+       -webkit-text-fill-color: #333;
+      color: #333;
+      transition: color .6s ease-in;
       background-size: 100% 200%;
       background-position: top;
       transition: background-position .6s ease-in;
@@ -80,8 +81,6 @@
     }
 
 }
-
-
 
 .fade-in {
     animation: fadeIn 1s ease-in-out forwards;

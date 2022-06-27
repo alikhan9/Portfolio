@@ -6,9 +6,12 @@ import emailjs from '@emailjs/browser'
 import './index.scss'
 import { AnimatedLetters } from '../AnimatedLetters/index';
 import { useStateIfMounted } from 'use-state-if-mounted'
+import { AiOutlineCloseSquare, AiOutlineLoading } from 'react-icons/ai'
 
 export const Contact = () => {
     const [letterClass, setLetterClass] = useStateIfMounted('text-animate')
+    const [hideInfoZone, setHideInfoZone] = useState(false);
+    const [isSending, setIsSending] = useStateIfMounted(false);
     const form = useRef()
 
     useEffect(() => {
@@ -18,9 +21,10 @@ export const Contact = () => {
     }, [])
 
     const sendEmail = (e) => {
-        e.preventDefault()
-
-        emailjs
+        e.preventDefault();
+        setIsSending(true);
+        setTimeout(() => {
+            emailjs
             .sendForm(
                 'service_ylednn',
                 'template_he7eax6',
@@ -29,13 +33,16 @@ export const Contact = () => {
             )
             .then(
                 () => {
-                    alert('Message successfully sent!')
-                    window.location.reload(false)
+                    setIsSending(false);
+                    alert('Email envoyé!');
                 },
                 () => {
-                    alert('Failed to send the message, please try again')
+                    setIsSending(false);
+                    alert('Échec de l\'envoi viellez réessayer');
                 }
             )
+        }, 10)
+        
     }
 
     return (
@@ -80,13 +87,20 @@ export const Contact = () => {
                                     ></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" className="flat-button" value="Envoyer" />
+                                    {isSending ?
+                                        <AiOutlineLoading className='loading-spinner' />
+                                        : <input type="submit" className="flat-button" value="Envoyer" />
+                                    }
+
                                 </li>
                             </ul>
                         </form>
                     </div>
                 </div>
-                <div className="info-map">
+                <div className={hideInfoZone ? null : "info-map"} style={hideInfoZone ? { opacity: 0 } : null}>
+                    <AiOutlineCloseSquare
+                        onClick={() => setHideInfoZone(!hideInfoZone)}
+                        className='close' />
                     France <br />
                     108 rue larevellière <br />
                     49100 Angers <br />
