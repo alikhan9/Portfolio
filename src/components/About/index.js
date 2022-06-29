@@ -1,26 +1,25 @@
 import './index.scss'
-import { useEffect, useState } from 'react'
+import { useEffect, lazy } from 'react'
 import Loader from 'react-loaders'
-import { AnimatedLetters } from '../AnimatedLetters/index';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useStateIfMounted } from 'use-state-if-mounted';
 
+const AnimatedLetters = lazy(() => import('../AnimatedLetters/index.jsx'));
 
-export const About = () => {
-  const [letterClass, setLetterClass] =  useStateIfMounted('text-animate')
-  const [isReady, setIsReady] = useStateIfMounted(false);
-
-
-  const particlesInit =  (main) => {   
-      loadFull(main);
+const About = () => {
+  const [letterClass, setLetterClass] = useStateIfMounted('text-animate')
+  const [isLoading, setIsLoading] = useStateIfMounted(true);
+  
+  const particlesInit = async (main) => {
+    await loadFull(main);
   };
 
   useEffect(() => {
     setTimeout(() => {
-        setLetterClass('text-animate-hover');
-        setIsReady(true);
-      }, 3100) 
+      setLetterClass('text-animate-hover');
+      setIsLoading(false);
+    }, 3000)
   }, [])
 
   return (
@@ -46,14 +45,18 @@ export const About = () => {
               Je peux aussi faire du front-end même si cela n'est pas ma spécialité.
             </p>
           </div>
-          {!isReady ? null : <Particles
+          {isLoading ? null : <Particles
             className='particles'
             id="tsparticles"
             init={particlesInit}
             options={{
+              fullscreen:{
+                enable:false,
+                zIndex:-1
+              },
               background: {
                 color: {
-                  value: "hsl(200,20%,10%)",
+                  value: "hsl(200,6%,10%)",
                 },
               },
               fpsLimit: 60,
@@ -101,6 +104,7 @@ export const About = () => {
                   },
                   random: false,
                   speed: 2,
+                  maxspeed: 5,
                   straight: false,
                 },
                 number: {
@@ -132,3 +136,4 @@ export const About = () => {
   )
 }
 
+export default About;

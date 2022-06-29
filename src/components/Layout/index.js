@@ -1,9 +1,10 @@
 import './index.scss'
 import React from 'react'
-import { Sidebar } from '../Sidebar/index';
+// import { Sidebar } from '../Sidebar/index';
 import { Outlet } from 'react-router-dom';
+const Sidebar = React.lazy(() => import('../Sidebar/index.js'));
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <div className="App">
       <Sidebar />
@@ -19,3 +20,5 @@ export const Layout = () => {
     </div>
   )
 }
+
+export default Layout;

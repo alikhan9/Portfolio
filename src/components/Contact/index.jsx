@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { useRef } from 'react'
+import { useRef, lazy } from 'react'
 import emailjs from '@emailjs/browser'
 import './index.scss'
-import { AnimatedLetters } from '../AnimatedLetters/index';
 import { useStateIfMounted } from 'use-state-if-mounted'
 import { AiOutlineCloseSquare, AiOutlineLoading } from 'react-icons/ai'
 
-export const Contact = () => {
+const AnimatedLetters = lazy(() => import('../AnimatedLetters/index.jsx'));
+
+const Contact = () => {
     const [letterClass, setLetterClass] = useStateIfMounted('text-animate')
     const [hideInfoZone, setHideInfoZone] = useState(false);
     const [isSending, setIsSending] = useStateIfMounted(false);
@@ -25,24 +26,24 @@ export const Contact = () => {
         setIsSending(true);
         setTimeout(() => {
             emailjs
-            .sendForm(
-                'service_ylednn',
-                'template_he7eax6',
-                form.current,
-                'nmOF8TAZ1xgAeHQdV'
-            )
-            .then(
-                () => {
-                    setIsSending(false);
-                    alert('Email envoyé!');
-                },
-                () => {
-                    setIsSending(false);
-                    alert('Échec de l\'envoi viellez réessayer');
-                }
-            )
+                .sendForm(
+                    'service_ylednn',
+                    'template_he7eax6',
+                    form.current,
+                    'nmOF8TAZ1xgAeHQdV'
+                )
+                .then(
+                    () => {
+                        setIsSending(false);
+                        alert('Email envoyé!');
+                    },
+                    () => {
+                        setIsSending(false);
+                        alert('Échec de l\'envoi viellez réessayer');
+                    }
+                )
         }, 10)
-        
+
     }
 
     return (
@@ -97,24 +98,28 @@ export const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <div className={hideInfoZone ? null : "info-map"} style={hideInfoZone ? { opacity: 0 } : null}>
-                    <AiOutlineCloseSquare
-                        onClick={() => setHideInfoZone(!hideInfoZone)}
-                        className='close' />
-                    France <br />
-                    108 rue larevellière <br />
-                    49100 Angers <br />
-                </div>
-                <div className="map-wrap">
-                    <MapContainer center={[47.4710662, -0.5367964]} zoom={13}>
-                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={[47.4710662, -0.5367964]}>
-                            <Popup>Alikhan habite ici, venez boire un café :)</Popup>
-                        </Marker>
-                    </MapContainer>
+                <div>
+                    <div className={hideInfoZone ? null : "info-map"} style={hideInfoZone ? { opacity: 0 } : null}>
+                        <AiOutlineCloseSquare
+                            onClick={() => setHideInfoZone(!hideInfoZone)}
+                            className='close' />
+                        France <br />
+                        108 rue larevellière <br />
+                        49100 Angers <br />
+                    </div>
+                    <div className="map-wrap">
+                        <MapContainer center={[47.4710662, -0.5367964]} zoom={13}>
+                            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                            <Marker position={[47.4710662, -0.5367964]}>
+                                <Popup>Alikhan habite ici, venez boire un café :)</Popup>
+                            </Marker>
+                        </MapContainer>
+                    </div>
                 </div>
             </div>
             <Loader type="pacman" />
         </>
     )
 }
+
+export default Contact;

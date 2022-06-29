@@ -6,7 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { GiSkills } from 'react-icons/gi'
-export const Sidebar = () => {
+import { AiOutlineSetting } from 'react-icons/ai'
+
+const Sidebar = () => {
   return (
     <div className='nav-bar'>
         <nav>
@@ -29,6 +31,13 @@ export const Sidebar = () => {
             className="skills-link" 
             to='/skills'>
                 <GiSkills style={{ color: '#4d4d4e' }} className='icons' />
+            </NavLink>
+            <NavLink 
+            exact='true' 
+            activeclassname='active' 
+            className="projects-link" 
+            to='/projects'>
+                <AiOutlineSetting style={{ color: '#4d4d4e' }} className='icons'/>
             </NavLink>
             <NavLink 
             exact='true' 
@@ -59,3 +68,5 @@ export const Sidebar = () => {
     </div>
   )
 }
+
+export default Sidebar;

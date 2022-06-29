@@ -1,0 +1,102 @@
+.text-zone-projects {
+    margin-top: 8%;
+    margin-left: 10%;
+
+    h1 {
+        color: #fff;
+        font-size: calc(53px*var(--scaler));
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: calc(18px*var(--scaler));
+            position: absolute;
+            opacity: 1;
+            right: 0;
+            margin-right: 12%;
+            animation: fadeIn 1s 1.7s backwards;
+        }
+
+        &::after {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+            margin-right: 12%;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 1;
+            right: 0;
+        }
+
+    }
+}
+
+.container-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5%;
+    width: 90vw;
+    margin-left: 8%;
+    color: #fff;
+
+    img {
+        width: calc(400px*var(--scaler));
+        height: calc(400px*var(--scaler));
+        border-radius: 1em;
+        transition: opacity .3s ease-in;
+    }
+
+    p {
+        background: #ffd700;
+        text-align: center
+    }
+
+    button {
+        display: none;
+        font-size: calc(18px*var(--scaler));
+        width: calc(170px*var(--scaler));
+        height: calc(30px*var(--scaler));
+        background: rgba(26, 26, 26,.7);
+        color: #ffd700;
+        border: none;
+        cursor: pointer;
+        border-radius: 65em;
+    }
+}
+
+.image-title {
+    font-size: calc(32px*var(--scaler));
+    text-align: center;
+}
+
+.container-buttons {
+    position: absolute;
+    display: flex;
+    width: calc(500px*var(--scaler));
+    justify-content: center;
+    column-gap: calc(20px*var(--scaler));
+}
+
+.container-image {
+    &:hover button{
+        display: inline;
+    }
+
+    &:hover img {
+        opacity: 0.6;
+        transition: opacity .3s ease-in;
+    }
+
+    a {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        transform: translateY(-200%);
+    }
+
+}

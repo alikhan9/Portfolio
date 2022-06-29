@@ -2,7 +2,7 @@ import './index.scss';
 
 import React from 'react'
 
-export const AnimatedLetters = ({ letterClass, strArray, idx}) => {
+const AnimatedLetters = ({ letterClass, strArray, idx}) => {
   return (
     <span>
         {
@@ -15,3 +15,5 @@ export const AnimatedLetters = ({ letterClass, strArray, idx}) => {
     </span>
   )
 }
+
+export default AnimatedLetters;

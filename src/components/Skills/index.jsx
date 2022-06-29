@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, lazy } from 'react'
 import Loader from 'react-loaders'
-import { AnimatedLetters } from '../AnimatedLetters/index';
 import { FaReact, FaDocker } from 'react-icons/fa';
 import { SiSpringboot, SiJava, SiPostgresql, SiCss3, SiAntdesign } from 'react-icons/si'
 import { DiJavascript1, DiHtml5, DiNodejs } from 'react-icons/di'
 import './index.scss'
 import { useStateIfMounted } from 'use-state-if-mounted';
 
-export const Skills = () => {
+const AnimatedLetters = lazy(() => import('../AnimatedLetters/index.jsx'));
+
+
+const Skills = () => {
   const [letterClass, setLetterClass] = useStateIfMounted('text-animate')
   const [fade, setFade] = useState(false);
   const [fade2, setFade2] = useState(false);
@@ -93,3 +95,5 @@ export const Skills = () => {
     </div>
   )
 }
+
+export default Skills;

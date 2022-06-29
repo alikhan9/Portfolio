@@ -14,8 +14,6 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
-    "gsap": "file:gsap-bonus.tgz",
-    "gsap-trial": "^3.10.4",
     "leaflet": "^1.8.0",
     "loaders.css": "^0.1.2",
     "pathseg": "^1.2.1",
@@ -24,15 +22,14 @@
     "react-icons": "^4.4.0",
     "react-leaflet": "^4.0.0",
     "react-loaders": "^3.0.1",
-    "react-particles-js": "^2.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.1.0",
+    "react-typing-effect": "^2.0.5",
     "sass": "^1.53.0",
-    "three": "^0.141.0",
+    "three": "^0.142.0",
     "tsparticles": "^2.1.0",
-    "use-state-if-mounted": "^1.0.7",
-    "web-vitals": "^2.1.4"
+    "use-state-if-mounted": "^1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
