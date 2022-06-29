@@ -111,7 +111,7 @@
   animation: fadeIn 1s 1.5s;
   animation-fill-mode: forwards;
   border-radius: .5em;
-
+  z-index: 5;
   span {
     font-size: calc(16px*var(--scaler));
 

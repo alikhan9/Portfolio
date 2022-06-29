@@ -3,13 +3,13 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/roam.gltf')
+  const { nodes, materials, animations } = useGLTF('/roam-transformed.glb')
   const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, -.2, -.35]} scale={40.67}>
-          <group name="2ef80b1dfb734b42bd96b1da8449f9a9fbx" rotation={[Math.PI / 2, -.8, -0.6]} scale={0.01}>
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, -.2, -1]} scale={40.67}>
+          <group name="2ef80b1dfb734b42bd96b1da8449f9a9fbx" rotation={[Math.PI / 2, -.2, -.6]} scale={0.01}>
             <group name="Object_2">
               <group name="RootNode">
                 <group name="aiAreaLight4" position={[0.73, 3.85, 5.45]} rotation={[0, -0.02, 0]} scale={[4.25, 3.05, 2.24]} />
@@ -196,4 +196,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('/roam.gltf')
+useGLTF.preload('/roam-transformed.glb')

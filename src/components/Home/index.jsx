@@ -5,15 +5,14 @@ import Loader from 'react-loaders';
 import { useStateIfMounted } from 'use-state-if-mounted';
 import { OrbitControls } from '@react-three/drei'
 
-// import { AnimatedLetters } from '../AnimatedLetters/index';
 const AnimatedLetters = lazy(() => import('../AnimatedLetters/index.jsx'));
 const Roam = lazy(() => import('./Roam'));
 
 
 
+
 const Home = () => {
     const [letterClass, setLetterClass] = useStateIfMounted('text-animate');
-    const [isPending, startTransition] = useTransition()
     const hello = ['B', 'o', 'n', 'j', 'o', 'u', 'r', ','];
     const iAm = ['J', 'e', ' ', 's', 'u', 'i', 's', ' ']
     const nameArray = ['A', 'l', 'i', 'k', 'h', 'a', 'n', ','];
@@ -49,13 +48,11 @@ const Home = () => {
                     <Link className='flat-button' to='/contact'>CONTACTEZ MOI</Link>
                 </div>
                 <Canvas className="canvas"
-                    shadows
-                    dpr={[1, 2]}
-                    onCreated={({ gl }) => ((gl.shadowMap.autoUpdate = false), (gl.shadowMap.needsUpdate = true))}>
+                    shadows>
                     <OrbitControls enableZoom={true} />
-                    <pointLight position={[0, 0, 0]} intensity={0.5} />
-                    <spotLight intensity={2.5} position={[20, 20, 20]} castShadow />
-                    <Suspense fallback={null} dispose={null}>
+                    <pointLight position={[12, 10, 0]} intensity={0.8} />
+                    {/* <spotLight intensity={2} position={[0, 0, 0]} castShadow /> */}
+                    <Suspense fallback={null}>
                         <Roam />
                     </Suspense>
                 </Canvas>

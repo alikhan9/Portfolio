@@ -65,7 +65,7 @@
         color: #ffd700;
         border: none;
         cursor: pointer;
-        border-radius: 65em;
+        border-radius: 6em;
     }
 }
 
@@ -77,7 +77,7 @@
 .container-buttons {
     position: absolute;
     display: flex;
-    width: calc(500px*var(--scaler));
+    width: calc(400px*var(--scaler));
     justify-content: center;
     column-gap: calc(20px*var(--scaler));
 }
@@ -88,7 +88,7 @@
     }
 
     &:hover img {
-        opacity: 0.6;
+        opacity: 0.3;
         transition: opacity .3s ease-in;
     }
 
