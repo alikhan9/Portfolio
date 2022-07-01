@@ -3,6 +3,7 @@ import Loader from 'react-loaders'
 import { FaReact, FaDocker } from 'react-icons/fa';
 import { SiSpringboot, SiJava, SiPostgresql, SiCss3, SiAntdesign } from 'react-icons/si'
 import { DiJavascript1, DiHtml5, DiNodejs } from 'react-icons/di'
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import './index.scss'
 import { useStateIfMounted } from 'use-state-if-mounted';
 
@@ -17,12 +18,31 @@ const Skills = () => {
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, 2500)
+    }, 4000)
   }, [])
 
   return (
     <div>
-      <div className="container  skills-page  ">
+      <div className="container  skills-page   ">
+        <div className="text-zones">
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={['A', ' ', 'p', 'r', 'o', 'p', 'o ', 's', ' ', 'd', 'e', ' ', 'm', 'o', 'i']}
+              idx={15}
+            />
+          </h1>
+          <p className='bigger-text'>
+            Je suis un développeur back-end à la recherche d'un poste dans une entreprise établie ou une start-up,
+            avec la possibilité de travailler avec les dernières technologies.
+          </p>
+          <p className='bigger-text'>
+            Je suis confiant, curieux et toujours à l'affût pour améliorer mes compétences.
+          </p>
+          <p className='bigger-text'>
+            Je peux aussi faire du front-end même si cela n'est pas ma spécialité.
+          </p>
+        </div>
         <div className="skills-zone">
           <div>
             <button
@@ -55,6 +75,11 @@ const Skills = () => {
                 <p>Node</p>
               </li>
             </ul>
+          </div>
+          <div className='info-user'>
+            <BsArrowLeft size={100} className='icon-arrow' />
+            <div>Cliquez</div>
+            <BsArrowRight size={100} className='icon-arrow second' />
           </div>
           <div>
             <button

@@ -4,7 +4,6 @@ import './App.scss';
 
 const Home = lazy(() => import('./components/Home/index'));
 const Layout = lazy(() => import('./components/Layout/index.js'));
-const About = lazy(() => import('./components/About/index.js'));
 const Contact = lazy(() => import('./components/Contact/index.jsx'));
 const Skills = lazy(() => import('./components/Skills/index.jsx'));
 const Projects = lazy(() => import('./components/Projects/index.jsx'));
@@ -18,7 +17,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />} >
             <Route index element={<Home />} />
-            <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/skills' element={<Skills />} />
             <Route path='/projects' element={<Projects />} />

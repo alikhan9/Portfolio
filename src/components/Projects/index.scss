@@ -1,7 +1,7 @@
 .text-zone-projects {
     margin-top: 8%;
-    margin-left: 10%;
-
+    margin-left: 8%;
+    text-align: center;
     h1 {
         color: #fff;
         font-size: calc(53px*var(--scaler));
@@ -83,6 +83,7 @@
 }
 
 .container-image {
+
     &:hover button{
         display: inline;
     }
@@ -98,5 +99,4 @@
         text-decoration: none;
         transform: translateY(-200%);
     }
-
 }
