@@ -1,14 +1,13 @@
 import './index.scss'
 import React from 'react'
-// import { Sidebar } from '../Sidebar/index';
 import { Outlet } from 'react-router-dom';
 const Sidebar = React.lazy(() => import('../Sidebar/index.js'));
 
-const Layout = () => {
+const Layout = ({ name }) => {
   return (
     <div className="App">
       <Sidebar />
-      <div className="page">
+      {/* <div className={`page ${name}`}>
         <span className="tags top-tags">&lt;body&gt;</span>
         <Outlet />
         <span className="tags bottom-tags">
@@ -16,7 +15,7 @@ const Layout = () => {
           <br />
           <span className="bottom-tag-html">&lt;/html&gt;</span>
         </span>
-      </div>
+      </div> */}
     </div>
   )
 }

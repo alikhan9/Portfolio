@@ -1,43 +1,25 @@
-
 .nav-bar {
   background: #181818;
-  width: calc(80px*var(--scaler));
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 3;
-  min-height: 500px;
+  min-height: 100vh;
 
-  .logo {
-    display: block;
-    padding: 8px 0;
-
-    img {
-      display: block;
-      margin: calc(8px*var(--scaler)) auto;
-      width: calc(24px*var(--scaler));
-      height: auto;
-      &.sub-logo {
-        width: calc(50px*var(--scaler));
-      }
-    }
-  }
 
   nav {
-    display: block;
-    text-align: center;
-    position: absolute;
-    height:calc(210px*var(--scaler));
-    top: 50%;
-    margin-top: calc(-120px*var(--scaler));
-    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     a {
-      font-size: calc(22px*var(--scaler));
+      font-size: 2.5rem;
       color: #4d4d4e;
       display: block;
-      line-height: calc(51px*var(--scaler));
-      height: calc(51px*var(--scaler));
+      line-height: 51px;
+      height: 51px;
       position: relative;
       text-decoration: none;
 
@@ -46,7 +28,6 @@
 
         svg {
           transition: opacity 0.3s ease-in;
-
           opacity: 0;
         }
 
@@ -57,7 +38,7 @@
 
       &:after {
         content: '';
-        font-size: calc(9px*var(--scaler));
+        font-size: 9px;
         letter-spacing: 2px;
         position: absolute;
         bottom: 0;
@@ -71,38 +52,30 @@
 
       &:first-child {
         &:after {
+          transform: translateX(-20%);
           content: 'Accueil';
         }
       }
     }
 
-    a.about-link {
-      &:after {
-        content: 'A Propos';
-      }
-    }
-
     a.projects-link {
       &:after {
+        transform: translateX(-20%);
         content: 'Projets';
       }
     }
 
     a.skills-link {
       &:after {
+        transform: translateX(-70%);
         content: 'Compétences';
       }
     }
 
     a.contact-link {
       &:after {
+        transform: translateX(-20%);
         content: 'Contact';
-      }
-    }
-
-    a.portfolio-link {
-      &:after {
-        content: 'PORTFOLIO';
       }
     }
 
@@ -115,7 +88,7 @@
 
   ul {
     position: absolute;
-    bottom: calc(20px*var(--scaler));
+    bottom: 20px;
     width: 100%;
     display: block;
     padding: 0;
@@ -125,16 +98,15 @@
 
     li {
       a {
-        padding: calc(7px*var(--scaler)) 0;
+        padding: 7px 0;
         margin-top: 2px;
         display: block;
-        font-size: calc(20px*var(--scaler));
-        line-height: calc(21px*var(--scaler));
+        font-size: 2.5rem;
+        line-height: 21px;
         color: #4d4d4e;
 
         &:hover svg {
           transition: color .4s ease-in;
-
           color: #ffd700;
         }
       }
@@ -143,52 +115,9 @@
 }
 
 
-@media (max-width: 5000px) {
-  :root {
-      --scaler: 2;
-  }
-}
 
-@media (max-width: 2551px) {
-  :root {
-      --scaler: 1.32;
-  }
-}
-
-@media (max-width: 1921px) {
-  :root {
-      --scaler: 1;
-  }
-}
-
-@media (max-width: 1681) {
-  :root {
-      --scaler: 0.87;
-  }
-}
-
-
-@media (max-width: 1281px) {
-  :root {
-      --scaler: 0.66;
-  }
-
-}
-
-@media (max-width: 1000px) {
-  :root {
-      --scaler: 0.8;
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-      --scaler: 0.6;
-  }
-}
-
-@media (max-width: 330px) {
-  :root {
-      --scaler: 0.45;
+@media (min-width: 300px) and (max-width: 900px) {
+  body {
+    overflow: auto;
   }
 }

@@ -1,14 +1,14 @@
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-export default function Model({ ...props }) {
+export default function Model({ scale, ratio }) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/roam-transformed.glb')
   const { actions } = useAnimations(animations, group)
   return (
-    <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, -.2, -1]} scale={40.67}>
+    <group ref={group} dispose={null}>
+      <group name="Sketchfab_Scene" >
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, -.2, -1]} scale={scale()}>
           <group name="2ef80b1dfb734b42bd96b1da8449f9a9fbx" rotation={[Math.PI / 2, -.2, -.6]} scale={0.01}>
             <group name="Object_2">
               <group name="RootNode">

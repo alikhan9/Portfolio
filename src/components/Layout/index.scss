@@ -25,10 +25,11 @@
   }
   
   .bottom-tag-html {
-    margin-left: -20px;
+    margin-left: -50%;
   }
   
   .container {
+    overflow: hidden;
     width: 100%;
     will-change: contents;
     height: 100%;

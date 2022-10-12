@@ -12,11 +12,11 @@
     "@react-three/fiber": "^8.0.27",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
-    "leaflet": "^1.8.0",
+    "better-react-carousel": "^1.1.1",
+    "eslint-config-react-app": "^7.0.1",
+    "leva": "^0.9.31",
     "loaders.css": "^0.1.2",
-    "pathseg": "^1.2.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",
@@ -24,12 +24,10 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "react-tsparticles": "^2.1.0",
-    "react-typing-effect": "^2.0.5",
-    "sass": "^1.53.0",
+    "sweetalert": "^2.1.2",
     "three": "^0.142.0",
-    "tsparticles": "^2.1.0",
-    "use-state-if-mounted": "^1.0.7"
+    "use-state-if-mounted": "^1.0.7",
+    "web-vitals": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,12 +53,17 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "portfolio"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8"
+  }
 }
