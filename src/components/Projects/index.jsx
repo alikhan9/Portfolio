@@ -30,9 +30,9 @@ const Projects = () => {
   }, [])
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       {loading ? <AnimatedLoading /> :
-        <div className="flex flex-col justify-center xl:gap-20 gap-20 md:gap-4 items-center xl:h-[100vh] w-full mx-16 xl:mr-28">
+        <div className="flex flex-col justify-center xl:gap-20 overflow-x-hidden gap-20 md:gap-4 items-center xl:h-[100vh] w-[100vw] mx-16 xl:mr-28">
           <div className="">
             <h1 className='lg:text-7xl text-6xl xl:my-5 md:my-20 mt-16 mb-5 text-[#ffd700]'>
               <AnimatedLetters
@@ -42,8 +42,8 @@ const Projects = () => {
               />
             </h1>
           </div>
-          <div className='w-[95%] md:py-0 py-2'>
-            <Carousel cols={1} rows={1} gap={30}>
+          <div className='w-[90%] md:py-0 py-2 md:mr-0 mr-16'>
+            <Carousel cols={1} rows={1} gap={20}>
               <Carousel.Item>
                 <div className='flex xl:flex-row flex-col xl:gap-16 gap-2 xl:items-center justify-center'>
                   <div>
@@ -57,7 +57,7 @@ const Projects = () => {
                           <p className='xl:px-4 pb-2'>C'est une simple application de chat avec les fonctionnalités suivantes : </p>
                           <ul className='list-disc marker:text-[#ffd700] px-12'>
                             <li className='py-2'>Création de compte </li>
-                            <li className='py-2'>Connection et déconnection</li>
+                            <li className='py-2'>Connexion et déconnexion</li>
                             <li className='py-2'>Création ou suppression  de groupe</li>
                             <li className='py-2'>Rejoindre ou quitter n'importe quel groupe</li>
                             <li className='py-2'>Ajout ou suppression de contact</li>

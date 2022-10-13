@@ -49,3 +49,20 @@ h1 {
         background-position: left;
     }
 }
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    float: right;
+    height: calc(30px*var(--scaler));
+    width: calc(30px*var(--scaler));
+    animation: spinner 1.5s linear infinite;
+}

@@ -69,9 +69,9 @@ const Home = () => {
     return (
         <div>
             {loading ? <AnimatedLoading/> :
-                <div className='home-page flex flex-col items-center lg:justify-start lg:items-center lg:flex-row '>
-                    <div className={'max-h-[100%] max-w-[400px] lg:translate-y-0 md:translate-y-[20%] translate-y-[60%] lg:block items-center justify-center flex flex-col md:translate-x-[-10%] w-full z-[10] lg:ml-40 xl:ml-28 '}>
-                        <h1 className='relative text-[#fff] xl:text-[5.5rem] md:text-7xl lg:text-7xl lg:min-w-full text-7xl'>
+                <div className='home-page flex flex-col items-center h-full  lg:justify-start lg:items-center lg:flex-row '>
+                    <div className={'max-h-[100%] md:max-w-[400px] lg:translate-y-0 md:translate-y-[20%] mt-20 lg:block items-center justify-center flex flex-col md:translate-x-[-10%] w-full z-[10] lg:ml-40 xl:ml-28 '}>
+                        <h1 className='relative text-[#fff] xl:text-[5.5rem] md:text-7xl lg:text-7xl lg:min-w-full text-6xl'>
                             <AnimatedLetters letterClass={letterClass}
                                 strArray={hello}
                                 idx={12} />
@@ -87,10 +87,10 @@ const Home = () => {
                                 strArray={jobArray}
                                 idx={22} />
                         </h1>
-                        <h2 className='md:text-2xl py-4 text-2xl'>Développeur Spring Boot / React</h2>
-                        <Link className='flat-button lg:text-3xl text-3xl min-w-[300px] text-center md:min-w-[200px]' to='/contact'>CONTACTEZ MOI</Link>
+                        <h2 className='md:text-2xl py-4 text-xl'>Développeur Spring Boot / React</h2>
+                        <Link className='flat-button translate-y-[-10px] text-2xl md:text-3xl min-w-[250px] text-center md:min-w-[200px]' to='/contact'>CONTACTEZ MOI</Link>
                     </div>
-                    <Canvas className="w-full xl:mr-[-8%] lg:m-0 md:mt-20 md:translate-x-0 md:translate-y-0 translate-y-[12%] translate-x-[-6%] z-[-20] xl:ml-0"
+                    <Canvas className="w-full xl:mr-[-8%] lg:m-0 md:mt-20 md:translate-x-0 md:translate-y-0 translate-x-[-6%] z-[-20] xl:ml-0"
                         shadows>
                         <Lights ratio={width / height} />
                         <Suspense fallback={null}>
@@ -100,7 +100,6 @@ const Home = () => {
                     <p className='copyright-tag'>This work is based on <a href="https://sketchfab.com/3d-models/room-c006e44a66a94d099297133a466d42f6" target="_blank" rel="noreferrer">room</a> by <a rel="noreferrer" target="_blank" href="https://sketchfab.com/sunnyvenkatesh92">Venkatesh</a> licensed under <a href='http://creativecommons.org/licenses/by/4.0/' rel="noreferrer" target="_blank">CC-BY-4.0</a></p>
                 </div>
             }
-            {/* <Loader type='pacman' /> */}
         </div>
     )
 }

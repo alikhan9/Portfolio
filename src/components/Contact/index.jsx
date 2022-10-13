@@ -45,6 +45,7 @@ const Contact = () => {
                     () => {
                         setIsSending(false);
                         swal("Email envoyé avec succès!", "", "success");
+                        e.target.reset();
                     },
                     () => {
                         setIsSending(false);
@@ -58,10 +59,10 @@ const Contact = () => {
     return (
         <>
             {loading ? <AnimatedLoading /> :
-                <div className="lg:w-[90vw] w-[85vw] ml-[10%] flex flex-col lg:flex-row justify-center lg:justify-between lg:gap-16 gap-10 items-center h-[100vh]">
+                <div className="lg:w-[90vw] w-[85vw] ml-[10%] flex flex-col lg:flex-row justify-center lg:justify-between lg:gap-16 gap-10 items-center h-full md:h-[100vh]">
                     <div className="w-full">
                         <div className='flex lg:justify-start justify-center'>
-                            <h1 className='lg:text-7xl text-6xl lg:my-5 mt-16 mb-5 text-[#ffd700]'>
+                            <h1 className='lg:text-7xl md:text-6xl text-5xl md:p-0 p-2 lg:my-5 mt-16 mb-5 text-[#ffd700]'>
                                 <AnimatedLetters
                                     letterClass={letterClass}
                                     strArray={['C', 'o', 'n', 't', 'a', 'c', 't', 'e ', 'z', ' ', ' ', 'm', 'o', 'i']}
@@ -72,10 +73,10 @@ const Contact = () => {
                         <div className='lg:my-20 '>
                             <form ref={form} onSubmit={sendEmail}>
                                 <ul className='grid gap-x-6 grid-cols-4'>
-                                    <li className="col-span-2">
+                                    <li className="md:col-span-2 col-span-4">
                                         <input className='w-full bg-[hsl(201,74%,26%)] py-6 outline-none px-2 my-4 active:scale-[0.98] duration-500 text-gray-100 lg:text-3xl text-2xl' placeholder="Nom" type="text" name="name" required />
                                     </li>
-                                    <li className="col-span-2">
+                                    <li className="md:col-span-2 col-span-4">
                                         <input
                                             placeholder="Email"
                                             type="email"
@@ -103,8 +104,8 @@ const Contact = () => {
                                     </li>
                                     <li className='col-end-5 col-span-2 flex justify-end'>
                                         {isSending ?
-                                            <AiOutlineLoading className='loading-spinner' />
-                                            : <input type="submit" className="flat-button lg:text-4xl text-3xl py-4 px-2" value="Envoyer" />
+                                            <AiOutlineLoading className='loading-spinner' size={40}/>
+                                            : <input type="submit" className="flat-button lg:text-4xl text-3xl py-4 px-10" value="Envoyer" />
                                         }
 
                                     </li>
@@ -113,7 +114,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div>
-                        <div className='lg:min-w-[50vw] lg:h-[100vh] h-[40vh] min-w-[85vw] relative' data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="200" data-aos-once="true">
+                        <div className='lg:min-w-[50vw] lg:h-[100vh] h-[40vh] min-w-[85vw] md:mb-0 mb-4 relative' data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="200" data-aos-once="true">
                             <div className="absolute top-0 right-0 left-0 bottom-0 pointer-events-none bg-blue-100 opacity-20 "></div>
                             <iframe className='bg-dark' width="100%" height="100%" frameBorder="0" scrolling="yes" marginHeight="0" marginWidth="0" title='map'
                                 src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=fr&amp;q=108%20rue%20larevelli%C3%A8re&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
