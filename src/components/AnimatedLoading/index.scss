@@ -3,11 +3,11 @@
     width: 330px;
     height: 330px;
     border-radius: 50%;
-    animation: ring 1.5s linear forwards;
+    animation: ring .75s linear forwards;
 }
 
 .text-color-anim {
-    animation: textColor 1.5s linear forwards;
+    animation: textColor .75s linear forwards;
     opacity: .3;
 }
 

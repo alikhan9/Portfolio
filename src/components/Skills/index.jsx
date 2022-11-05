@@ -31,11 +31,11 @@ const Skills = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500)
+    }, 750)
 
     setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, 5000)
+    }, 4250)
   }, [])
 
   useEffect(() => {

@@ -50,10 +50,10 @@ const Home = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        },1500)
+        },750)
         setTimeout(() => {
             setLetterClass('text-animate-hover');
-        }, 5500);
+        }, 4500);
     }, [])
 
     const ratioRoom = () => {
@@ -90,7 +90,7 @@ const Home = () => {
                         <h2 className='md:text-2xl py-4 text-xl'>Développeur Spring Boot / React</h2>
                         <Link className='flat-button translate-y-[-10px] text-2xl md:text-3xl min-w-[250px] text-center md:min-w-[200px]' to='/contact'>CONTACTEZ MOI</Link>
                     </div>
-                    <Canvas className="w-full xl:mr-[-8%] lg:m-0 md:mt-20 md:translate-x-0 md:translate-y-0 translate-x-[-6%] z-[-20] xl:ml-0"
+                    <Canvas className="w-full xl:mr-[-8%] fade-in lg:m-0 md:mt-20 md:translate-x-0 md:translate-y-0 translate-x-[-6%] z-[-20] xl:ml-0"
                         shadows>
                         <Lights ratio={width / height} />
                         <Suspense fallback={null}>

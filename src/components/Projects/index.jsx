@@ -5,6 +5,8 @@ import { useStateIfMounted } from 'use-state-if-mounted';
 import crypto from '../../images/crypto.png';
 import chatApp from '../../images/chatApp.png'
 import admin from '../../images/admin.png'
+import garage from '../../images/garage.PNG'
+import admingarage from '../../images/admin-garage.PNG'
 import reactImg from '../../images/react.png'
 import Loader from 'react-loaders';
 import Carousel from 'better-react-carousel';
@@ -23,10 +25,10 @@ const Projects = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500)
+    }, 750)
     setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, 4500)
+    }, 3750)
   }, [])
 
   return (
@@ -44,6 +46,86 @@ const Projects = () => {
           </div>
           <div className='w-[90%] md:py-0 py-2 md:mr-0 mr-16'>
             <Carousel cols={1} rows={1} gap={20}>
+              <Carousel.Item>
+                <div className='flex xl:flex-row flex-col xl:gap-16 gap-2 justify-center xl:items-center'>
+                  <div>
+                    <img src={garage} alt="..." className='xl:w-[800px] xl:h-[600px] md:max-h-[500px] xl:max-h-full w-full rounded-lg' />
+                  </div>
+                  <div className='text-gray-200 tracking-wide xl:min-w-[500px] w-full xl:max-w-[500px] px-4 rounded-lg xl:h-[750px] bg-[hsl(200,6%,15%)] text-3xl flex flex-col justify-center'>
+                    <div className='flex xl:flex-col gap-4 md:flex-row flex-col'>
+                      <div className='md:max-w-[50%] xl:max-w-none'>
+                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
+                        <div className='xl:px-4 font-thin'>
+                          <p className='xl:px-4 pb-2'>C'est un site pour garage avec vente de véhicule.
+                            Ce site comprend :
+                          </p>
+                          <ul className='list-disc marker:text-[#ffd700] px-12'>
+                            <li className='py-2'>Page de présentation et service</li>
+                            <li className='py-2'>Catalogue de véhicule</li>
+                            <li className='py-2'>Page de contact</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className='min-w-[50%'>
+                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
+                        <div className='xl:px-8 font-thin'>
+                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>TailwindCss</span>.</p>
+                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Firebase</span>.</p>
+                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Firebase</span>.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='flex justify-center gap-10 pt-16 mb-6'>
+                      <a href='https://garage.alikhan-zaipoulaiev.fr' target="_blank" rel="noreferrer">
+                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Live demo</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className='flex xl:flex-row flex-col xl:gap-16 gap-2 justify-center xl:items-center'>
+                  <div>
+                    <img src={admingarage} alt="..." className='xl:w-[800px] xl:h-[600px] md:max-h-[500px] xl:max-h-full w-full rounded-lg' />
+                  </div>
+                  <div className='text-gray-200 tracking-wide xl:min-w-[500px] w-full xl:max-w-[500px] px-4 rounded-lg xl:h-[750px] bg-[hsl(200,6%,15%)] text-3xl flex flex-col justify-center'>
+                    <div className='flex xl:flex-col gap-4 md:flex-row flex-col'>
+                      <div className='md:max-w-[50%] xl:max-w-none'>
+                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
+                        <div className='xl:px-4 font-thin'>
+                          <p className='xl:px-4 pb-2'>C'est un site administratif pour gérer les véhicules du site précédent.
+                            Il comprend :
+                          </p>
+                          <ul className='list-disc marker:text-[#ffd700] px-12'>
+                            <li className='py-2'>Page de connexion au compte administrateur</li>
+                            <li className='py-2'>Une page avec un tableau contenant tous les véhicules</li>
+                            <li className='py-2'>Une page détaillée des véhicules avec la possibilité de tout modifier</li>
+                            <li className='py-2'>Une page pour ajouter de nouveaux véhicules</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className='min-w-[50%'>
+                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
+                        <div className='xl:px-8 font-thin'>
+                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>TailwindCss</span>.</p>
+                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Firebase</span>.</p>
+                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Firebase</span>.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='flex justify-center gap-10 pt-16 mb-6'>
+                      <a href='https://garage-admin.alikhan-zaipoulaiev.fr' target="_blank" rel="noreferrer">
+                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Live demo</button>
+                      </a>
+                    </div>
+                    <div className='text-center p-2'>
+                      Les identifiants pour se connecter sont :  
+                      <p>test@test.com </p>
+                      <p>password</p>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
               <Carousel.Item>
                 <div className='flex xl:flex-row flex-col xl:gap-16 gap-2 xl:items-center justify-center'>
                   <div>
@@ -68,10 +150,9 @@ const Projects = () => {
                       <div>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
                         <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span>, l'envoi de messages se fait avec Stompjs et le style avec <span className='text-[#ffd700]'>scss</span>.</p>
+                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span>, l'envoi/réception de messages est fait avec websocket et le style avec <span className='text-[#ffd700]'>Tailwindcss</span>.</p>
                           <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Springboot</span> et la base de données avec <span className='text-[#ffd700]'>PostgreSQL</span>.</p>
-                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>AWS</span>.</p>
-                          <p className='flex pt-6 gap-2 '><RiErrorWarningLine className='inline tracking-normal p-0 m-0 min-h-full' color={"red"} size={50} /> Attention cette app n'est disponible que du Lundi au Vendredi de 8h00 à 18h00.</p>
+                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Google Cloud Platform</span>.</p>
                         </div>
                       </div>
                     </div>
@@ -113,10 +194,10 @@ const Projects = () => {
                       <div className='min-w-[50%]'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
                         <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>Bootstrap</span>, plus précisément <span className='text-[#ffd700]'>MUI</span>.</p>
-                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Springboot</span> et la base de données avec <span className='text-[#ffd700]'>PostgreSQL</span>.
-                            C'est la même api que pour le ChatApp, mais la partie administrative n'est disponible que'avec compte administrateur.</p>
-                          <p>Le front-end est hébergé sur <span className='text-[#ffd700]'>Firebase</span> et le back-end sur <span className='text-[#ffd700]'>AWS</span>.</p>
+                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>MUI</span>.</p>
+                          <p className='py-2'>
+                            C'est la même api que pour le ChatApp, mais la partie administrative n'est disponible que avec un compte administrateur.
+                          </p>
                         </div>
                       </div>
                     </div>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
 import { useRef, lazy } from 'react'
 import emailjs from '@emailjs/browser'
 import './index.scss'
@@ -23,11 +22,11 @@ const Contact = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 1500)
+        }, 750)
 
         setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 4500)
+        }, 3750)
     }, [])
 
     const sendEmail = (e) => {
