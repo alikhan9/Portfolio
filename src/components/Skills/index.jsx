@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react'
-import { FaReact, FaDocker, FaAws } from 'react-icons/fa';
+import { FaReact, FaDocker, FaAws, FaLaravel } from 'react-icons/fa';
 import { SiSpringboot, SiJava, SiPostgresql, SiCss3, SiTailwindcss, SiFirebase } from 'react-icons/si'
 import { DiJavascript1, DiHtml5 } from 'react-icons/di'
 import { BsArrowLeft, BsArrowRight, BsBootstrap } from 'react-icons/bs'
@@ -98,13 +98,14 @@ const Skills = () => {
 
           <div className='text-justify flex flex-col justify-center'>
             <p className='lg:text-3xl md:text-3xl text-2xl font-thin text-gray-300'>
-              Je suis un développeur web à la recherche d'un poste dans une entreprise établie ou une start-up.
-            </p>
-            <p className='lg:text-3xl md:text-3xl text-2xl py-4 font-thin text-gray-300'>
-              Je suis confiant, curieux et toujours à l'affût pour améliorer mes compétences.
-            </p>
-            <p className='lg:text-3xl md:text-3xl text-2xl font-thin text-gray-300'>
-              Je peux faire du front-end comme du back-end.
+              En tant que développeur web junior,
+              je suis à la recherche d'un poste au sein d'une entreprise établie ou d'une start-up innovante.
+              <p className='lg:text-3xl md:text-3xl text-2xl py-4 font-thin text-gray-300'>
+                Mes compétences en développement web, combinées à mon attitude proactive, créative et orientée vers
+                l'amélioration continue, me permettent d'être un atout pour toute équipe de développement.
+              </p>
+              <p className='lg:text-3xl md:text-3xl text-2xl font-thin text-gray-300'>
+                Je suis capable de travailler efficacement à la fois en front-end et en back-end, et je suis prêt à relever de nouveaux défis pour continuer à élargir mon expertise et à contribuer au succès de l'entreprise.            </p>
             </p>
           </div>
 
@@ -129,8 +130,8 @@ const Skills = () => {
                 <p>Java</p>
               </li>
               <li className='skill-6 flex flex-col justify-center items-center'>
-                <FaAws style={{ color: '#ffd415' }} className='icons' />
-                <p>AWS</p>
+                <FaLaravel style={{ color: '#ff7b00' }} className='icons' />
+                <p>Laravel</p>
               </li>
               <li className='skill-3 flex flex-col justify-center items-center'>
                 <SiPostgresql style={{ color: '#0d7bf1' }} className='icons' />

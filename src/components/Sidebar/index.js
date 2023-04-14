@@ -41,14 +41,14 @@ const Sidebar = () => {
                 </NavLink>
             </nav>
             <ul>
-                <li>
+                {/* <li>
                     <a
                         target="_blank"
                         rel="noreferrer"
                         href="https://github.com/alikhan9">
                         <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
                     </a>
-                </li>
+                </li> */}
                 <li>
                     <a
                         target="_blank"

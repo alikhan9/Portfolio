@@ -56,22 +56,25 @@ const Projects = () => {
                       <div className='md:max-w-[50%] xl:max-w-none'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
                         <div className='xl:px-4 font-thin'>
-                          <p className='xl:px-4 pb-2'>C'est un site pour garage avec vente de véhicule.
-                            Ce site comprend :
+                          <p className='xl:px-4 pb-2'>Il s'agit d'un site Web pour un garage automobile proposant la vente de véhicules.
+                            Ce site comprend les pages suivantes:
                           </p>
                           <ul className='list-disc marker:text-[#ffd700] px-12'>
-                            <li className='py-2'>Page de présentation et service</li>
-                            <li className='py-2'>Catalogue de véhicule</li>
-                            <li className='py-2'>Page de contact</li>
+                            <li className='py-2'>Une page de présentation et de description des services proposés</li>
+                            <li className='py-2'>Un catalogue de véhicules disponibles à la vente</li>
+                            <li className='py-2'>Une page de contact</li>
                           </ul>
                         </div>
                       </div>
                       <div className='min-w-[50%'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
                         <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>TailwindCss</span>.</p>
-                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Firebase</span>.</p>
-                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Firebase</span>.</p>
+                          <p>Le développement du Front-end a été réalisé à l'aide de la bibliothèque <span className='text-[#ffd700]'>React</span>,
+                            tandis que le design a été implémenté à l'aide de <span className='text-[#ffd700]'>TailwindCss</span>.
+                          </p>
+                          <p className='mt-2'>
+                            Le développement du Back-end a été réalisé en utilisant <span className='text-[#ffd700]'>Firebase</span>.
+                            L'ensemble de l'application est hébergée sur <span className='text-[#ffd700]'>Firebase</span>.</p>
                         </div>
                       </div>
                     </div>
@@ -93,23 +96,27 @@ const Projects = () => {
                       <div className='md:max-w-[50%] xl:max-w-none'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
                         <div className='xl:px-4 font-thin'>
-                          <p className='xl:px-4 pb-2'>C'est un site administratif pour gérer les véhicules du site précédent.
-                            Il comprend :
+                          <p className='xl:px-4 pb-2'>Il s'agit d'un site web administratif permettant la gestion des
+                            véhicules proposés sur le site précédent.
+                            Il comprend les fonctionnalités suivantes:
+                            une page de connexion pour l'administrateur,
+                            une page affichant un tableau récapitulatif de tous les véhicules proposés,
+                            une page détaillée pour chaque véhicule permettant des modifications et mises à jour, et
+                            une page pour l'ajout de nouveaux véhicules.
                           </p>
-                          <ul className='list-disc marker:text-[#ffd700] px-12'>
-                            <li className='py-2'>Page de connexion au compte administrateur</li>
-                            <li className='py-2'>Une page avec un tableau contenant tous les véhicules</li>
-                            <li className='py-2'>Une page détaillée des véhicules avec la possibilité de tout modifier</li>
-                            <li className='py-2'>Une page pour ajouter de nouveaux véhicules</li>
-                          </ul>
                         </div>
                       </div>
                       <div className='min-w-[50%'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
                         <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>TailwindCss</span>.</p>
-                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Firebase</span>.</p>
-                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Firebase</span>.</p>
+                          <p>
+                            L'interface utilisateur a été développée en utilisant la bibliothèque <span className='text-[#ffd700]'>React</span> et
+                            la mise en forme a été implémentée à l'aide de <span className='text-[#ffd700]'>TailwindCss</span>.
+                          </p>
+                          <p className='mt-2'>
+                            Le Back-end de l'application a été conçu à l'aide de <span className='text-[#ffd700]'>Firebase</span>,
+                            et l'application elle-même est hébergée sur la plateforme <span className='text-[#ffd700]'>Firebase</span>.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -119,98 +126,9 @@ const Projects = () => {
                       </a>
                     </div>
                     <div className='text-center p-2'>
-                      Les identifiants pour se connecter sont :  
+                      Les identifiants pour se connecter sont :
                       <p>test@test.com </p>
                       <p>password</p>
-                    </div>
-                  </div>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className='flex xl:flex-row flex-col xl:gap-16 gap-2 xl:items-center justify-center'>
-                  <div>
-                    <img src={chatApp} alt="..." className='xl:w-[800px] xl:h-[600px] md:max-h-[500px] xl:max-h-full w-full rounded-lg' />
-                  </div>
-                  <div className='text-gray-200 tracking-wide xl:min-w-[500px] w-full xl:max-w-[500px] px-4 rounded-lg xl:h-[750px] bg-[hsl(200,6%,15%)] text-3xl flex flex-col justify-center'>
-                    <div className='flex xl:flex-col gap-6 md:flex-row flex-col'>
-                      <div className='min-w-[50%]'>
-                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
-                        <div className='xl:px-4 font-thin'>
-                          <p className='xl:px-4 pb-2'>C'est une simple application de chat avec les fonctionnalités suivantes : </p>
-                          <ul className='list-disc marker:text-[#ffd700] px-12'>
-                            <li className='py-2'>Création de compte </li>
-                            <li className='py-2'>Connexion et déconnexion</li>
-                            <li className='py-2'>Création ou suppression  de groupe</li>
-                            <li className='py-2'>Rejoindre ou quitter n'importe quel groupe</li>
-                            <li className='py-2'>Ajout ou suppression de contact</li>
-                            <li className='py-2'>Trier contact selon nom de groupe / utilisateur</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
-                        <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span>, l'envoi/réception de messages est fait avec websocket et le style avec <span className='text-[#ffd700]'>Tailwindcss</span>.</p>
-                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Springboot</span> et la base de données avec <span className='text-[#ffd700]'>PostgreSQL</span>.</p>
-                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Google Cloud Platform</span>.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='flex justify-center gap-10 pt-16 mb-6'>
-                      <a href='https://chatapp.alikhan-zaipoulaiev.fr/' target="_blank" rel="noreferrer">
-                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Live demo</button>
-                      </a>
-                      <a href='https://github.com/alikhan9/chat-app' className='' target="_blank" rel="noreferrer">
-                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Front-end</button>
-                      </a>
-                      <a href='https://github.com/alikhan9/springboot-chat-api' className='second_button' target="_blank" rel="noreferrer">
-                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Back-end</button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className='flex xl:flex-row flex-col xl:gap-16 gap-2 xl:items-center justify-center'>
-                  <div>
-                    <img src={admin} alt="..." className='xl:w-[800px] xl:h-[600px] md:max-h-[500px] xl:max-h-full w-full rounded-lg' />
-                  </div>
-                  <div className='text-gray-200 tracking-wide xl:min-w-[500px] w-full xl:max-w-[500px] px-4 rounded-lg xl:h-[750px] bg-[hsl(200,6%,15%)] text-3xl flex flex-col justify-center'>
-                    <div className='flex xl:flex-col gap-4 md:flex-row flex-col'>
-                      <div className='min-w-[50%]'>
-                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
-                        <div className='xl:px-4 font-thin'>
-                          <p className='xl:px-4 pb-2'>Cette application permet de gérer le Chatapp. Les fonctionnalités sont : </p>
-                          <ul className='list-disc marker:text-[#ffd700] px-12'>
-                            <li className='py-2'>Connexion et déconnexion au compte admin</li>
-                            <li className='py-2'>Visualisation de l'état global de l'api</li>
-                            <li className='py-2'>Créer, modifier, supprimer et visualiser les utilisateurs</li>
-                            <li className='py-2'>Créer, modifier, supprimer et visualiser les groupes</li>
-                            <li className='py-2'>Créer, modifier, supprimer et visualiser les contacts des utilisateurs</li>
-                            <li className='py-2'>Créer, modifier, supprimer et visualiser les messages personnels et des groupes</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className='min-w-[50%]'>
-                        <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
-                        <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>MUI</span>.</p>
-                          <p className='py-2'>
-                            C'est la même api que pour le ChatApp, mais la partie administrative n'est disponible que avec un compte administrateur.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='flex justify-center gap-10 pt-16 mb-6'>
-                      <a href='https://admin.alikhan-zaipoulaiev.fr/' target="_blank" rel="noreferrer">
-                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Live demo</button>
-                      </a>
-                      <a href='https://github.com/alikhan9/admin' className='' target="_blank" rel="noreferrer">
-                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Front-end</button>
-                      </a>
-                      <a href='https://github.com/alikhan9/springboot-chat-api' className='second_button' target="_blank" rel="noreferrer">
-                        <button className='bg-[#ffd700] md:p-4 p-2 md:px-8 md:text-4xl text-2xl rounded-md text-black'>Back-end</button>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -225,26 +143,31 @@ const Projects = () => {
                       <div className='md:max-w-[50%] xl:max-w-none'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
                         <div className='xl:px-4 font-thin'>
-                          <p className='xl:px-4 pb-2'>C'est une application qui track les différents crypto monnaie.
-                            Les données sont obtenues via l'api <a href="https://www.coingecko.com/fr" className='text-[#ffd700]' target="_blank" rel="noreferrer" >Coin Gecko</a>.
-                            Cette application comprend :
+                          <p className='xl:px-4 pb-2'>Il s'agit d'une application de suivi des différentes crypto-monnaies.
+                            Les données sont obtenues via l'API Coin Gecko.
+                            Les fonctionnalités incluent :
                           </p>
                           <ul className='list-disc marker:text-[#ffd700] px-12'>
-                            <li className='py-2'>Création de compte </li>
-                            <li className='py-2'>Connexion et déconnexion</li>
-                            <li className='py-2'>Affichage des crypto-monnaies selon leur classement général</li>
-                            <li className='py-2'>Affichage des crypto-monnaies populaires du moment</li>
+                            <li className='py-2'>La création d'un compte utilisateur</li>
+                            <li className='py-2'>L'affichage des crypto-monnaies classées par ordre général</li>
+                            <li className='py-2'>L'affichage des crypto-monnaies populaires actuellement</li>
+                            <li className='py-2'>La visualisation de détails supplémentaires d'une crypto-monnaie en cliquant dessus</li>
                             <li className='py-2'>Visualiser plus en détails une monnaie en cliquant dessus</li>
-                            <li className='py-2'>Possibilité d'ajouter / supprimer une crypto-monnaie dans la liste de favoris</li>
+                            <li className='py-2'>La possibilité d'ajouter ou de supprimer une crypto-monnaie de la liste des favoris</li>
                           </ul>
                         </div>
                       </div>
                       <div className='min-w-[50%'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
                         <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>TailwindCss</span>.</p>
-                          <p className='py-2'>Le Back-end a été fait avec <span className='text-[#ffd700]'>Firebase</span>.</p>
-                          <p>Le tout est hébergé sur <span className='text-[#ffd700]'>Firebase</span>.</p>
+                          <p>
+                            L'interface utilisateur a été développée en utilisant la bibliothèque <span className='text-[#ffd700]'>React</span> et
+                            la mise en forme a été implémentée à l'aide de <span className='text-[#ffd700]'>TailwindCss</span>.
+                          </p>
+                          <p className='mt-2'>
+                            Le Back-end de l'application a été conçu à l'aide de <span className='text-[#ffd700]'>Firebase</span>,
+                            et l'application elle-même est hébergée sur la plateforme <span className='text-[#ffd700]'>Firebase</span>.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -269,20 +192,31 @@ const Projects = () => {
                       <div className='md:max-w-[50%] xl:max-w-none'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Qu'est ce que c'est?</h2>
                         <div className='xl:px-4 font-thin'>
-                          <p className='xl:px-4 pb-2'>C'est un site vitrine sans aucun back-end.<br /> Il contient :
+
+                          
+
+                          <p className='xl:px-4 pb-2'>
+                            Il s'agit d'un site web statique qui n'utilise pas de technologies de back-end.
+                            Il comprend les pages suivantes:
                           </p>
                           <ul className='list-disc marker:text-[#ffd700] px-12'>
-                            <li className='py-2'>Une page d'acceuil </li>
-                            <li className='py-2'>Une page d'information</li>
-                            <li className='py-2'>Une page de prix</li>
+                            <li className='py-2'>Une page d'accueil présentant les informations de base de l'entreprise</li>
+                            <li className='py-2'>Une page d'informations détaillant les services ou produits proposés,
+                            </li>
+                            <li className='py-2'>Une page de tarification qui affiche les prix des produits ou services proposés.</li>
                           </ul>
                         </div>
                       </div>
                       <div className='min-w-[50%'>
                         <h2 className='text-4xl py-4 text-blue-500 tracking-wider xl:text-center'>Avec quoi cela a été fait?</h2>
                         <div className='xl:px-8 font-thin'>
-                          <p>Le Front-end a été réalisé avec <span className='text-[#ffd700]'>React</span> et le style avec <span className='text-[#ffd700]'>TailwindCss</span>.</p>
-                          <p>Le site est hébergé sur <span className='text-[#ffd700]'>Firebase</span>.</p>
+                        <p>
+                            L'interface utilisateur a été développée en utilisant la bibliothèque <span className='text-[#ffd700]'>React</span> et
+                            la mise en forme a été implémentée à l'aide de <span className='text-[#ffd700]'>TailwindCss</span>.
+                          </p>
+                          <p className='mt-2'>
+                            L'application elle-même est hébergée sur la plateforme <span className='text-[#ffd700]'>Firebase</span>.
+                          </p>
                         </div>
                       </div>
                     </div>

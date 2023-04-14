@@ -87,8 +87,8 @@ const Home = () => {
                                 strArray={jobArray}
                                 idx={22} />
                         </h1>
-                        <h2 className='md:text-2xl py-4 text-xl'>Développeur Spring Boot / React</h2>
-                        <Link className='flat-button translate-y-[-10px] text-2xl md:text-3xl min-w-[250px] text-center md:min-w-[200px]' to='/contact'>CONTACTEZ MOI</Link>
+                        {/* <h2 className='md:text-2xl py-4 text-xl'>Développeur Spring Boot / React / Laravel</h2> */}
+                        <Link className='flat-button translate-y-[20px] text-2xl md:text-3xl min-w-[250px] text-center md:min-w-[200px]' to='/contact'>CONTACTEZ MOI</Link>
                     </div>
                     <Canvas className="w-full xl:mr-[-8%] fade-in lg:m-0 md:mt-20 md:translate-x-0 md:translate-y-0 translate-x-[-6%] z-[-20] xl:ml-0"
                         shadows>
@@ -97,7 +97,7 @@ const Home = () => {
                             <Roam scale={ratioRoom} ratio={width / height} />
                         </Suspense>
                     </Canvas>
-                    <p className='copyright-tag'>This work is based on <a href="https://sketchfab.com/3d-models/room-c006e44a66a94d099297133a466d42f6" target="_blank" rel="noreferrer">room</a> by <a rel="noreferrer" target="_blank" href="https://sketchfab.com/sunnyvenkatesh92">Venkatesh</a> licensed under <a href='http://creativecommons.org/licenses/by/4.0/' rel="noreferrer" target="_blank">CC-BY-4.0</a></p>
+                    {/* <p className='copyright-tag'>This work is based on <a href="https://sketchfab.com/3d-models/room-c006e44a66a94d099297133a466d42f6" target="_blank" rel="noreferrer">room</a> by <a rel="noreferrer" target="_blank" href="https://sketchfab.com/sunnyvenkatesh92">Venkatesh</a> licensed under <a href='http://creativecommons.org/licenses/by/4.0/' rel="noreferrer" target="_blank">CC-BY-4.0</a></p> */}
                 </div>
             }
         </div>
