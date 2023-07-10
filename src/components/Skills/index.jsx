@@ -1,8 +1,8 @@
 import React, { useEffect, useState, lazy } from 'react'
-import { FaReact, FaDocker, FaAws, FaLaravel } from 'react-icons/fa';
-import { SiSpringboot, SiJava, SiPostgresql, SiCss3, SiTailwindcss, SiFirebase } from 'react-icons/si'
-import { DiJavascript1, DiHtml5 } from 'react-icons/di'
-import { BsArrowLeft, BsArrowRight, BsBootstrap } from 'react-icons/bs'
+import { FaReact, FaVuejs, FaLaravel, FaPhp } from 'react-icons/fa';
+import { SiJava, SiPostgresql, SiCss3, SiTailwindcss, SiFirebase, SiSpringboot } from 'react-icons/si'
+import { DiJavascript1,DiBootstrap } from 'react-icons/di'
+import { AiOutlineConsoleSql } from 'react-icons/ai'
 import './index.scss'
 import { useStateIfMounted } from 'use-state-if-mounted';
 
@@ -36,6 +36,10 @@ const Skills = () => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 4250)
+    setTimeout(() => {
+      manageFade();
+      manageFade2();
+    }, 3700)
   }, [])
 
   useEffect(() => {
@@ -98,14 +102,13 @@ const Skills = () => {
 
           <div className='text-justify flex flex-col justify-center'>
             <p className='lg:text-3xl md:text-3xl text-2xl font-thin text-gray-300'>
-              En tant que développeur web junior,
-              je suis à la recherche d'un poste au sein d'une entreprise établie ou d'une start-up innovante.
+              Développeur web passionné et polyvalent, je recherche une opportunité au sein d'une entreprise dynamique.
               <p className='lg:text-3xl md:text-3xl text-2xl py-4 font-thin text-gray-300'>
-                Mes compétences en développement web, combinées à mon attitude proactive, créative et orientée vers
-                l'amélioration continue, me permettent d'être un atout pour toute équipe de développement.
+                Expert en front-end et back-end, je maîtrise les langages et frameworks modernes. Ma passion pour l'expérience utilisateur et mon esprit d'équipe font de moi un collaborateur précieux.
               </p>
               <p className='lg:text-3xl md:text-3xl text-2xl font-thin text-gray-300'>
-                Je suis capable de travailler efficacement à la fois en front-end et en back-end, et je suis prêt à relever de nouveaux défis pour continuer à élargir mon expertise et à contribuer au succès de l'entreprise.            </p>
+                Je suis prêt à relever de nouveaux défis et contribuer à votre succès. Contactez-moi pour discuter de notre collaboration.
+              </p>
             </p>
           </div>
 
@@ -122,8 +125,8 @@ const Skills = () => {
               /></button>
             <ul className={classBtn1}>
               <li className='skill-1 flex flex-col justify-center items-center'>
-                <SiSpringboot style={{ color: 'hsl(122, 80%, 60%)' }} className='icons' />
-                <p>Spring Boot</p>
+                <FaPhp style={{ color: 'purple' }} className='icons' />
+                <p>Php</p>
               </li>
               <li className='skill-2-5 flex flex-col justify-center items-center'>
                 <SiJava style={{ color: 'hsl(39, 82%, 48%)' }} className='icons' />
@@ -138,8 +141,8 @@ const Skills = () => {
                 <p>PostgreSQL</p>
               </li>
               <li className='skill-4 flex flex-col justify-center items-center'>
-                <FaDocker style={{ color: '#011122' }} className='icons' />
-                <p>Docker</p>
+                <SiSpringboot style={{ color: 'hsl(122, 80%, 60%)' }} className='icons' />
+                <p>SpringBoot</p>
               </li>
               <li className='skill-5 flex flex-col justify-center items-center'>
                 <SiFirebase style={{ color: 'orange' }} className='icons' />
@@ -147,11 +150,11 @@ const Skills = () => {
               </li>
             </ul>
           </div>
-          <div className='info-user max-w-[20%] 2xl:text-5xl hidden lg:flex text-4xl'>
+          {/* <div className='info-user max-w-[20%] 2xl:text-5xl hidden lg:flex text-4xl'>
             <BsArrowLeft className='icon-arrow 2xl:min-w-[10%] max-w-[33%]' />
             <div className='max-w-[33%]'>Cliquez</div>
             <BsArrowRight className='icon-arrow max-w-[33%] 2xl:min-w-[10%]' />
-          </div>
+          </div> */}
           <div>
             <button
               className={fade2 === true ? "show-button" : null}
@@ -180,11 +183,11 @@ const Skills = () => {
                 <p>Javascript</p>
               </li>
               <li className='skill-4 flex flex-col justify-center items-center'>
-                <DiHtml5 style={{ color: '#79ec0e' }} className='icons' />
-                <p>HTML5</p>
+                <FaVuejs style={{ color: '#79ec0e' }} className='icons' />
+                <p>Vue</p>
               </li>
               <li className='skill-5 flex flex-col justify-center items-center'>
-                <BsBootstrap style={{ color: '#eca90e' }} className='icons' />
+                <DiBootstrap style={{ color: '#eca90e' }} className='icons' />
                 <p>Bootstrap</p>
               </li>
             </ul>
